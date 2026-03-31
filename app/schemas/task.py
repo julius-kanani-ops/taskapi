@@ -1,5 +1,6 @@
 from pydantic import BaseModel, ConfigDict
 from datetime import datetime
+from uuid import UUID
 
 
 class TaskBase(BaseModel):
@@ -16,9 +17,10 @@ class TaskUpdate(TaskBase):
 
 
 class TaskResponse(TaskBase):
-    id: int
+    id: UUID
     completed: bool
     created_at: datetime
     updated_at: datetime
 
     model_config = ConfigDict(from_attributes=True)
+
