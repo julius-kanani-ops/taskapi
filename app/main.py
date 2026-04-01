@@ -1,7 +1,10 @@
-from app.routers.tasks import router as task_router
-from fastapi import FastAPI
 from datetime import datetime, timezone
 
+
+from fastapi import FastAPI
+
+
+from app.routers.tasks import router as task_router
 
 app = FastAPI()
 
